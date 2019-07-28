@@ -1,0 +1,14 @@
+.main-title {
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.description {
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: center;
+}
+
+.navigation-cards-component {
+    margin-top: 5%;
+}
