@@ -1,0 +1,14 @@
+.main-title {
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.description {
+    font-style: italic;
+    text-align: center;
+    font-family: 'Montserrat' sans-serif;
+}
+
+.navigation-cards-component {
+    margin-top: 5%;
+}

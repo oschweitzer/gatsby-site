@@ -5,5 +5,8 @@
  */
 
 module.exports = {
-  /* Your site config here */
-}
+    /* Your site config here */
+    plugins: [{
+        resolve: "gatsby-plugin-material-ui"
+    }]
+};
