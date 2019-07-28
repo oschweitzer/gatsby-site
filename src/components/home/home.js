@@ -1,10 +1,10 @@
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Container from "@material-ui/core/Container";
 import React from "react";
-import styles from "./home.module.css";
-import NavigationCards from "../navigation-cards/navigation-cards";
 import Footer from "../footer/footer";
-import { faQuoteRight, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NavigationCards from "../navigation-cards/navigation-cards";
+import styles from "./home.module.css";
 
 export default () => (
   <React.Fragment>
