@@ -21,7 +21,7 @@ import styles from "./navigation-cards.module.css";
 export default () => (
   <Grid container justify="center" spacing={2}>
     <Grid item xs={3}>
-      <Link to="/projects/">
+      <Link to="/projects/" style={{ textDecoration: "none" }}>
         <Card className={styles.mainCard}>
           <CardHeader
             className={styles.cardHeader}
@@ -41,7 +41,7 @@ export default () => (
       </Link>
     </Grid>
     <Grid item xs={3}>
-      <Link to="/hobbies/">
+      <Link to="/hobbies/" style={{ textDecoration: "none" }}>
         <Card className={styles.mainCard}>
           <CardHeader
             className={styles.cardHeader}
@@ -61,7 +61,7 @@ export default () => (
       </Link>
     </Grid>
     <Grid item xs={3}>
-      <Link to="/contact/">
+      <Link to="/contact/" style={{ textDecoration: "none" }}>
         <Card className={styles.mainCard}>
           <CardHeader
             className={styles.cardHeader}
