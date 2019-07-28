@@ -12,15 +12,15 @@ import {
   faAddressCard
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import projectsImage from "../../static/projects.jpeg";
-import contactImage from "../../static/contact.jpeg";
-import hobbiesImage from "../../static/hobbies.jpeg";
+import projectsImage from "../../../static/projects.jpeg";
+import contactImage from "../../../static/contact.jpeg";
+import hobbiesImage from "../../../static/hobbies.jpeg";
 import styles from "./navigation-cards.module.css";
 
 export default () => (
   <Grid container justify="center" spacing={2}>
     <Grid item xs={3}>
-      <Card>
+      <Card className={styles.mainCard}>
         <CardHeader
           className={styles.cardHeader}
           title="Projects"
@@ -32,12 +32,13 @@ export default () => (
           image={projectsImage}
           title="Projects screenshots"
         ></CardMedia>
-        <CardContent></CardContent>
+        <CardContent className={styles.cardContent}>
+          My personal and professional projects.
+        </CardContent>
       </Card>
     </Grid>
-
     <Grid item xs={3}>
-      <Card>
+      <Card className={styles.mainCard}>
         <CardHeader
           className={styles.cardHeader}
           title="Hobbies"
@@ -49,11 +50,13 @@ export default () => (
           image={hobbiesImage}
           title="Hobbies photos"
         ></CardMedia>
-        <CardContent></CardContent>
+        <CardContent className={styles.cardContent}>
+          What I like to do when I'm not working.
+        </CardContent>
       </Card>
     </Grid>
     <Grid item xs={3}>
-      <Card>
+      <Card className={styles.mainCard}>
         <CardHeader
           className={styles.cardHeader}
           title="Contact"
@@ -65,7 +68,9 @@ export default () => (
           image={contactImage}
           title="Contact form screenshot"
         ></CardMedia>
-        <CardContent></CardContent>
+        <CardContent className={styles.cardContent}>
+          How to contact me.
+        </CardContent>
       </Card>
     </Grid>
   </Grid>
