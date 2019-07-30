@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, Grid } from "@material-ui/core";
 import { graphql, StaticQuery } from "gatsby";
 import React from "react";
-import styles from "../../navigation-cards/navigation-cards.module.css";
+import * as navigationStyles from "../../navigation-cards/navigation-cards.module.css";
 
 export default () => (
   <StaticQuery
@@ -9,7 +9,12 @@ export default () => (
       query {
         github {
           viewer {
-            repositories(first: 50, privacy: PUBLIC, isFork: false) {
+            repositories(
+              first: 50
+              privacy: PUBLIC
+              isFork: false
+              ownerAffiliations: OWNER
+            ) {
               nodes {
                 name
                 description
@@ -20,16 +25,16 @@ export default () => (
       }
     `}
     render={data => (
-      <Grid container justify="center" spacing={2}>
+      <Grid container justify="center" spacing={3}>
         {data.github.viewer.repositories.nodes.map(repo => (
-          <Grid item xs={3}>
+          <Grid item key={repo.name} xs={4}>
             <Card>
               <CardHeader
-                className={styles.cardHeader}
+                className={navigationStyles.cardHeader}
                 title={repo.name}
                 titleTypographyProps={{ variant: "h5" }}
               ></CardHeader>
-              <CardContent className={styles.cardContent}>
+              <CardContent className={navigationStyles.cardContent}>
                 {repo.description}
               </CardContent>
             </Card>
