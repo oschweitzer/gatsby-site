@@ -1,2 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
-html {}
+html {
+    font-family: 'Roboto' sans-serif;
+}
