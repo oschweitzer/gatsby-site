@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./imagesDeclarations.d.ts"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
