@@ -88,6 +88,16 @@ const events = [
           </ul>
         </p>
 
+        <h4>Skills</h4>
+        <p>
+          <ul>
+            <li>Project management & coordination</li>
+            <li>Demos & presentation</li>
+            <li>Agile software development (SCRUM, Kanban)</li>
+            <li>Organizational skills</li>
+          </ul>
+        </p>
+
         <h4>Links</h4>
         <p>
           <ul>
@@ -121,7 +131,50 @@ const events = [
     subheader: `${moment("2016-11-01").format("LL")} - ${moment(
       "2017-02-15"
     ).format("LL")}`,
-    description: ["Some description for event 2"],
+    description: (
+      <article>
+        <h4>Context</h4>
+        <p className={styles.projectDescription}>
+          Altran is a global leader in Engineering and R&D services. I worked as
+          junior consultant for the IRCAD IT team and for the Altran R&D
+          service.
+        </p>
+        <h4>Assignements</h4>
+        <h5>
+          Development of an interface to facilitate new user account creation
+        </h5>
+        <p className={styles.projectDescription}>
+          Using AngularJS framework, the goal was to create a web application
+          that allow the IT team to easily create LDAP, entry pass access and
+          NetApp configuration for new users. I also add to develop the web API
+          to communicate with the LDAP server using Python.
+        </p>
+        <h5>
+          Development of an PaaS (Platform as a Service) application to compute
+          scientific algorithm on medical images
+        </h5>
+        <p className={styles.projectDescription}>
+          The goal of this project was to develop a PaaS application that allow
+          users to send their algorithm files and their medical images through a
+          web interface. These data will then be computed (in Docker containers)
+          and the results will be displayed on the interface.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>JavaScript</li>
+          <li>NodeJS</li>
+          <li>Kue</li>
+          <li>AngularJS</li>
+          <li>Python</li>
+          <li>PassportJS, LDAP</li>
+        </ul>
+        <h4>Skills</h4>
+        <ul>
+          <li>Independent work</li>
+          <li>Creative force</li>
+        </ul>
+      </article>
+    ),
     icon: (
       <Avatar>
         <FontAwesomeIcon icon={faBriefcase} />
