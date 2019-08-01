@@ -191,7 +191,41 @@ const events = [
     subheader: `${moment("2016-02-01").format("LL")} - ${moment(
       "2016-07-15"
     ).format("LL")}`,
-    description: ["Some description for event 2"],
+    description: (
+      <article>
+        <h4>Context</h4>
+        <p className={styles.projectDescription}>
+          The goal of this assignement was to use the{" "}
+          <a href="https://github.com/IRCAD-IHU/sight">FW4SPL framework</a> for
+          the web. To do that I used Emscripten, a compilation toolchain
+          allowing to compile C++/C into JavaScript. I managed to compile a
+          client side medical images anonymization tool using the DCMTK library
+          compiled in JavaScript.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Emscripten</li>
+          <li>JavaScript</li>
+          <li>CMake</li>
+          <li>C++</li>
+          <li>DICOM</li>
+        </ul>
+        <h4>Skills</h4>
+        <ul>
+          <li>Independent work</li>
+          <li>Project presentation</li>
+          <li>Project report writing</li>
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://www.slideshare.net/slideshow/embed_code/key/JRIWGEUHLhQspJ">
+              Slides of the presentation
+            </a>
+          </li>
+        </ul>
+      </article>
+    ),
     icon: (
       <Avatar>
         <FontAwesomeIcon icon={faBriefcase} />
@@ -208,7 +242,37 @@ const events = [
     subheader: `${moment("2014-09-01").format("LL")} - ${moment(
       "2015-02-15"
     ).format("LL")}`,
-    description: ["Some description for event 2"],
+    description: (
+      <article>
+        <h4>Context</h4>
+        <p className={styles.projectDescription}>
+          The goal of this assignement was to develop a web viewing tool for
+          medical data. This tool allows to display DICOM images (medical
+          images) and 3D models of organs and to inteact with them.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript (jQuery)</li>
+          <li>WebGL</li>
+          <li>DICOM</li>
+        </ul>
+        <h4>Skills</h4>
+        <ul>
+          <li>State of the art report of WebGL framework</li>
+          <li>Project presentation</li>
+          <li>Project report writing</li>
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://www.slideshare.net/slideshow/embed_code/key/at8zPYUPAfnGGE">
+              Slides of the presentation
+            </a>
+          </li>
+        </ul>
+      </article>
+    ),
     icon: (
       <Avatar>
         <FontAwesomeIcon icon={faBriefcase} />
