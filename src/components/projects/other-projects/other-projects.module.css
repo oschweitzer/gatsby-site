@@ -3,3 +3,8 @@
     /* box-shadow: 1px 1px 1px #777; */
     margin-right: 5px;
 }
+
+.project-description {
+    text-indent: 3em;
+    text-align: justify;
+}
