@@ -1,53 +1,56 @@
 {
-    "name": "gatsby-resume-site",
-    "private": true,
-    "description": "A simplified bare-bones starter for Gatsby",
-    "version": "0.1.0",
-    "license": "MIT",
-    "scripts": {
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "format": "prettier --write src/**/*.{js,jsx}",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-        "type-check": "tsc --noEmit",
-        "lint": "tslint --project ."
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^1.2.19",
-        "@fortawesome/free-solid-svg-icons": "^5.9.0",
-        "@fortawesome/react-fontawesome": "^0.1.4",
-        "@material-ui/core": "^4.2.1",
-        "@material-ui/styles": "^4.2.1",
-        "gatsby": "^2.13.39",
-        "gatsby-plugin-material-ui": "^2.1.4",
-        "gatsby-plugin-tslint": "0.0.2",
-        "gatsby-plugin-typescript": "^2.1.2",
-        "gatsby-transformer-typescript-css-modules": "^1.0.14",
-        "moment": "^2.24.0",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "react-material-timeline": "^3.0.1"
-    },
-    "devDependencies": {
-        "@types/material-ui": "^0.21.6",
-        "@types/react": "^16.8.23",
-        "@types/react-dom": "^16.8.5",
-        "gatsby-source-graphql": "^2.1.3",
-        "prettier": "^1.18.2",
-        "tslint": "^5.18.0",
-        "tslint-config-prettier": "^1.18.0",
-        "tslint-loader": "^3.5.4",
-        "tslint-plugin-prettier": "^2.0.1",
-        "tslint-react": "^4.0.0",
-        "typescript": "^3.5.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-    },
-    "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
-    }
+  "name": "gatsby-resume-site",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "type-check": "tsc --noEmit",
+    "lint": "tslint --project ."
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/styles": "^4.2.1",
+    "bulma": "^0.7.5",
+    "bulma-timeline": "^3.0.4",
+    "gatsby": "^2.13.39",
+    "gatsby-plugin-material-ui": "^2.1.4",
+    "gatsby-plugin-sass": "^2.1.8",
+    "gatsby-plugin-tslint": "0.0.2",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "gatsby-transformer-typescript-css-modules": "^1.0.14",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/material-ui": "^0.21.6",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
+    "gatsby-source-graphql": "^2.1.3",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
 }

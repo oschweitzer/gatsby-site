@@ -9,11 +9,11 @@ import * as altranLogo from "../../../../static/altran.svg";
 import * as styles from "./other-projects.module.css";
 import moment from "moment";
 
-const events = [
+/* const events = [
   {
     title: (
       <Icon>
-        <img className={styles.logo} src={ihuLogo} />
+        <img classNameName={styles.logo} src={ihuLogo} />
         <span>CONDOR project</span>
       </Icon>
     ),
@@ -21,7 +21,7 @@ const events = [
     description: (
       <article>
         <h4>Context</h4>
-        <p className={styles.projectDescription}>
+        <p classNameName={styles.projectDescription}>
           The aim of the CONDOR project is to develop new computer technology
           systems to significantly help surgical teams avoid human errors in the
           operating room. The project includes collaborations with academic
@@ -124,7 +124,7 @@ const events = [
   {
     title: (
       <Icon>
-        <img className={styles.logo} src={altranLogo} />
+        <img classNameName={styles.logo} src={altranLogo} />
         <span>Junior consultant</span>
       </Icon>
     ),
@@ -134,7 +134,7 @@ const events = [
     description: (
       <article>
         <h4>Context</h4>
-        <p className={styles.projectDescription}>
+        <p classNameName={styles.projectDescription}>
           Altran is a global leader in Engineering and R&D services. I worked as
           junior consultant for the IRCAD IT team and for the Altran R&D
           service.
@@ -143,7 +143,7 @@ const events = [
         <h5>
           Development of an interface to facilitate new user account creation
         </h5>
-        <p className={styles.projectDescription}>
+        <p classNameName={styles.projectDescription}>
           Using AngularJS framework, the goal was to create a web application
           that allow the IT team to easily create LDAP, entry pass access and
           NetApp configuration for new users. I also add to develop the web API
@@ -153,7 +153,7 @@ const events = [
           Development of an PaaS (Platform as a Service) application to compute
           scientific algorithm on medical images
         </h5>
-        <p className={styles.projectDescription}>
+        <p classNameName={styles.projectDescription}>
           The goal of this project was to develop a PaaS application that allow
           users to send their algorithm files and their medical images through a
           web interface. These data will then be computed (in Docker containers)
@@ -184,7 +184,7 @@ const events = [
   {
     title: (
       <Icon>
-        <img className={styles.logo} src={ircadLogo} />
+        <img classNameName={styles.logo} src={ircadLogo} />
         <span>Internship: Final projet assignement</span>
       </Icon>
     ),
@@ -194,7 +194,7 @@ const events = [
     description: (
       <article>
         <h4>Context</h4>
-        <p className={styles.projectDescription}>
+        <p classNameName={styles.projectDescription}>
           The goal of this assignement was to use the{" "}
           <a href="https://github.com/IRCAD-IHU/sight">FW4SPL framework</a> for
           the web. To do that I used Emscripten, a compilation toolchain
@@ -235,7 +235,7 @@ const events = [
   {
     title: (
       <Icon>
-        <img className={styles.logo} src={ircadLogo} />
+        <img classNameName={styles.logo} src={ircadLogo} />
         <span>Internship: Engineer assistant</span>
       </Icon>
     ),
@@ -245,7 +245,7 @@ const events = [
     description: (
       <article>
         <h4>Context</h4>
-        <p className={styles.projectDescription}>
+        <p classNameName={styles.projectDescription}>
           The goal of this assignement was to develop a web viewing tool for
           medical data. This tool allows to display DICOM images (medical
           images) and 3D models of organs and to inteact with them.
@@ -279,5 +279,45 @@ const events = [
       </Avatar>
     )
   }
-];
-export default () => <Timeline events={events}></Timeline>;
+]; */
+export default () => (
+<div className="timeline">
+  <div className="timeline-item">
+    <div className="timeline-marker"></div>
+    <div className="timeline-content">
+      <p className="heading">{moment("2017-03-01").format("LL")} - present day</p>
+    </div>
+  </div>
+  <div className="timeline-item">
+    <div className="timeline-marker">
+    </div>
+    <div className="timeline-content">
+      <p className="heading">{moment("2016-11-01").format("LL")} - {moment(
+      "2017-02-15"
+    ).format("LL")}</p>
+    </div>
+  </div>
+  <div className="timeline-item">
+    <div className="timeline-marker">
+    </div>
+    <div className="timeline-content">
+      <p className="heading">{moment("2016-02-01").format("LL")} - {moment(
+      "2016-07-15"
+    ).format("LL")}</p>
+    </div>
+  </div>
+  <div className="timeline-item">
+    <div className="timeline-marker">
+    </div>
+    <div className="timeline-content">
+      <p className="heading">{moment("2014-09-01").format("LL")} - {moment(
+  "2015-02-15"
+).format("LL")}</p>
+    </div>
+  </div>
+</div>
+
+);
+
+
+
