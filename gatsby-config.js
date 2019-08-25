@@ -5,8 +5,8 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [`gatsby-plugin-sass`,
+  plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-transformer-typescript-css-modules"
     },
@@ -23,11 +23,18 @@ module.exports = {
         // HTTP headers
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `bearer ${process.env.TOKEN}`
+          Authorization: `bearer ${process.env.GITHUB_TOKEN}`
         },
         // Additional options to pass to node-fetch
         fetchOptions: {}
-      }
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     }
   ]
 };

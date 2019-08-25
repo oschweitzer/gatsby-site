@@ -25,6 +25,7 @@
     "gatsby-plugin-sass": "^2.1.8",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.2",
+    "gatsby-source-contentful": "^2.1.29",
     "gatsby-transformer-typescript-css-modules": "^1.0.14",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",

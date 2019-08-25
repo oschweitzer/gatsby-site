@@ -4,8 +4,7 @@
 
 .description {
     font-style: italic;
-    text-align: center;
-    font-size: 60%;
+    font-size: 50%;
 }
 
 .navigation-cards-component {
@@ -16,6 +15,7 @@
     color: white;
     margin-bottom: 1%;
     font-size: 2.5em;
+    text-align: center;
 }
 
 .profile-photo {
