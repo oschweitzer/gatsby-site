@@ -1,57 +1,63 @@
-import {faBriefcase, faGraduationCap} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import moment from 'moment';
-import React from 'react';
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { graphql, useStaticQuery } from "gatsby";
+import moment from "moment";
+import React from "react";
+import ReactHtmlParser from "react-html-parser";
+import styles from "./education.module.css";
 
-const Education = () => (
-  <section>
-    <h2 className="title is-2">
-      <FontAwesomeIcon icon={faGraduationCap} color={'black'}/>{' Education'}</h2>
-    <div className="timeline is-centered">
-      <div className="timeline-item">
-        <div className="timeline-marker is-icon">
-          <FontAwesomeIcon icon={faBriefcase} color={'#121212'}/>
-        </div>
-        <div className="timeline-content">
-          <p className="heading">{moment("2017-03-01").format("LL")} - present day</p>
-          <span className='title is-6'>UTBM</span>
-          <p>
-            UTBM....
-          </p>
-        </div>
+const query = graphql`
+  {
+    allContentfulEducation(
+      filter: { degree: { ne: null } }
+      sort: { fields: endDate, order: DESC }
+    ) {
+      nodes {
+        degree
+        description {
+          description
+        }
+        endDate
+        university
+        startDate
+      }
+    }
+  }
+`;
+
+const Education = () => {
+  const data = useStaticQuery(query).allContentfulEducation.nodes;
+  return (
+    <section>
+      <h2 className="title is-2">
+        <FontAwesomeIcon icon={faGraduationCap} color={"black"} />
+        {" Education"}
+      </h2>
+      <div className="timeline is-centered">
+        {data.map((education, index) => (
+          <div key={index} className="timeline-item">
+            <div className="timeline-marker is-icon">
+              <FontAwesomeIcon icon={faGraduationCap} color={"#121212"} />
+            </div>
+            <div className="timeline-content">
+              <p className="heading">
+                <i>
+                  {moment(education.startDate).format("LL")} -{" "}
+                  {moment(education.endDate).format("LL")}
+                </i>
+              </p>
+              <span className={[styles.university, "title is-6"].join(" ")}>
+                {education.degree} - {education.university}
+              </span>
+              <div className={[styles.subject, "content"].join(" ")}>
+                {ReactHtmlParser(education.description.description)}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="timeline-item">
-        <div className="timeline-marker is-icon">
-          <FontAwesomeIcon icon={faBriefcase} color={'#121212'}/>
-        </div>
-        <div className="timeline-content">
-          <p className="heading">{moment("2016-11-01").format("LL")} - {moment(
-            "2017-02-15"
-          ).format("LL")}</p>
-        </div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-marker is-icon">
-          <FontAwesomeIcon icon={faBriefcase} color={'#121212'}/>
-        </div>
-        <div className="timeline-content">
-          <p className="heading">{moment("2016-02-01").format("LL")} - {moment(
-            "2016-07-15"
-          ).format("LL")}</p>
-        </div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-marker is-icon">
-          <FontAwesomeIcon icon={faBriefcase} color={'#121212'}/>
-        </div>
-        <div className="timeline-content">
-          <p className="heading">{moment("2014-09-01").format("LL")} - {moment(
-            "2015-02-15"
-          ).format("LL")}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Education;

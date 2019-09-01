@@ -7,3 +7,30 @@
     text-indent: 2em;
     text-align: justify;
 }
+
+.project-missions {
+    text-align: justify;
+}
+
+.company {
+    color: #1976d2;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+}
+
+.skill {
+    padding: 0.3em;
+    font-size: 0.8em;
+}
