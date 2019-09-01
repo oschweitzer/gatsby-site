@@ -2,7 +2,7 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import * as styles from "./personal-projects.module.css";
+import * as styles from "./personal-projects.module.scss";
 
 const query = graphql`
   {

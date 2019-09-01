@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import profilePhoto from "../../../static/me.jpeg";
-import styles from "./identity.module.css";
+import styles from "./identity.module.scss";
 
 const idQuery = graphql`
   {

@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import moment from "moment";
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
-import styles from "./education.module.css";
+import styles from "./education.module.scss";
 
 const query = graphql`
   {

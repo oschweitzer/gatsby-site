@@ -5,7 +5,7 @@ import * as moment from "moment";
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
 import { arrayTo2DArray2 } from "../../../common/utils";
-import styles from "./work-experience.module.css";
+import styles from "./work-experience.module.scss";
 
 const query = graphql`
   {
