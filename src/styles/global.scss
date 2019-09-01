@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+$title-color: white;
+$body-color: white;
+$card-header-color: white;
+$tag-background-color: #1976d2;
+$tag-color: white;
+$divider-color: black;
+$divider-background-color: black;
+
+@import "~bulma/bulma.sass";
+@import "~bulma-timeline";
+@import "~bulma-divider";
+
+html {
+  background-color: #202020;
+}
+
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+hr {
+  background-color: dimgrey;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
