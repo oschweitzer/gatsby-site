@@ -1,8 +1,7 @@
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import * as styles from "./personal-projects.module.scss";
+import {graphql, useStaticQuery} from 'gatsby';
+import React from 'react';
+import {FaHome} from 'react-icons/fa';
+import * as styles from './personal-projects.module.scss';
 
 const query = graphql`
   {
@@ -39,7 +38,7 @@ const PersonalProject = () => {
     <React.Fragment>
       <section className={styles.personalProjects}>
         <h2 className={"title is-2"}>
-          <FontAwesomeIcon icon={faHome} color={"#D6B4A7"} />
+          <FaHome color={"#D6B4A7"} />
           {" Personal projects"}
         </h2>
         <div className="columns is-multiline">

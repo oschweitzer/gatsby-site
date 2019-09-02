@@ -1,10 +1,9 @@
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql, useStaticQuery } from "gatsby";
-import moment from "moment";
-import React from "react";
-import ReactHtmlParser from "react-html-parser";
-import styles from "./education.module.scss";
+import {graphql, useStaticQuery} from 'gatsby';
+import moment from 'moment';
+import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
+import {FaGraduationCap} from 'react-icons/fa';
+import styles from './education.module.scss';
 
 const query = graphql`
   {
@@ -30,14 +29,14 @@ const Education = () => {
   return (
     <section>
       <h2 className="title is-2">
-        <FontAwesomeIcon icon={faGraduationCap} color={"black"} />
+        <FaGraduationCap color={"black"} />
         {" Education"}
       </h2>
       <div className="timeline is-centered">
         {data.map((education, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-marker is-icon">
-              <FontAwesomeIcon icon={faGraduationCap} color={"#121212"} />
+              <FaGraduationCap color={"#121212"} />
             </div>
             <div className="timeline-content">
               <p className="heading">

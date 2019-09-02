@@ -15,9 +15,6 @@
     "lint": "tslint --project ."
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "bulma": "^0.7.5",
     "bulma-divider": "^0.2.0",
     "bulma-timeline": "^3.0.4",
@@ -32,7 +29,8 @@
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-html-parser": "^2.0.2"
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^3.7.0"
   },
   "devDependencies": {
     "@types/material-ui": "^0.21.6",

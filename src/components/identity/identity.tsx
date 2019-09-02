@@ -1,9 +1,8 @@
-import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import profilePhoto from "../../../static/me.jpeg";
-import styles from "./identity.module.scss";
+import {graphql, useStaticQuery} from 'gatsby';
+import React from 'react';
+import {FaEnvelope, FaGithub, FaLinkedin, FaQuoteLeft, FaQuoteRight, FaTwitter} from 'react-icons/fa';
+import profilePhoto from '../../../static/me.jpeg';
+import styles from './identity.module.scss';
 
 const idQuery = graphql`
   {
@@ -36,10 +35,33 @@ const Identity = () => {
             <h1 className={styles.mainTitle}> {data.name} </h1>
             <h3 className={"title is-3"}>{data.job}</h3>
             <blockquote className={[styles.description, "content"].join(" ")}>
-              <FontAwesomeIcon icon={faQuoteLeft} />
+              <FaQuoteLeft />
               <span> {data.description.description} </span>
-              <FontAwesomeIcon icon={faQuoteRight} />
+              <FaQuoteRight />
             </blockquote>
+            <div className='is-block'>
+              <a
+                className={styles.socialNetworks}
+                href='https://www.linkedin.com/in/olivier-schweitzer-a494147b'
+                target="_blank">
+                <FaLinkedin className={styles.linkedin} />
+              </a>
+              <a className={styles.socialNetworks}
+                 href='https://github.com/oschweitzer'
+                 target="_blank">
+                <FaGithub color={'white'} />
+              </a>
+              <a className={styles.socialNetworks}
+                 href='mailto:olivier.sch68@gmail.com'
+                 target="_blank">
+                <FaEnvelope color={'#B23121'} />
+              </a>
+              <a className={styles.socialNetworks}
+                 href='https://twitter.com/Oli_Schweitzer'
+                 target="_blank">
+                <FaTwitter color={'#1DA1F2'} />
+              </a>
+            </div>
           </section>
         </div>
       </section>
