@@ -43,9 +43,7 @@ const WorkExperience = () => {
       <div className="timeline is-centered">
         {data.map((workExperience, index: number) => (
           <div key={index} className="timeline-item">
-            <div className="timeline-marker is-icon">
-              <FaBriefcase color={"#121212"} />
-            </div>
+            <div className="timeline-marker is-image is-24x24" />
             <div className="timeline-content">
               <p className="heading">
                 <i>
