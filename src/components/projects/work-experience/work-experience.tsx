@@ -1,11 +1,10 @@
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql, useStaticQuery } from "gatsby";
-import * as moment from "moment";
-import React from "react";
-import ReactHtmlParser from "react-html-parser";
-import { arrayTo2DArray2 } from "../../../common/utils";
-import styles from "./work-experience.module.scss";
+import {graphql, useStaticQuery} from 'gatsby';
+import * as moment from 'moment';
+import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
+import {FaBriefcase} from 'react-icons/fa';
+import {arrayTo2DArray2} from '../../../common/utils';
+import styles from './work-experience.module.scss';
 
 const query = graphql`
   {
@@ -38,15 +37,13 @@ const WorkExperience = () => {
   return (
     <section>
       <h2 className="title is-2">
-        <FontAwesomeIcon icon={faBriefcase} color={"#624a2e"} />
+        <FaBriefcase color={"#624a2e"} />
         {" Work experience"}
       </h2>
       <div className="timeline is-centered">
         {data.map((workExperience, index: number) => (
           <div key={index} className="timeline-item">
-            <div className="timeline-marker is-icon">
-              <FontAwesomeIcon icon={faBriefcase} color={"#121212"} />
-            </div>
+            <div className="timeline-marker is-image is-24x24" />
             <div className="timeline-content">
               <p className="heading">
                 <i>

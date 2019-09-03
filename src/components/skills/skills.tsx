@@ -1,8 +1,7 @@
-import { faBrain } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import styles from "./skills.module.scss";
+import {graphql, useStaticQuery} from 'gatsby';
+import React from 'react';
+import {FaBrain} from 'react-icons/fa';
+import styles from './skills.module.scss';
 
 const query = graphql`
   {
@@ -51,7 +50,7 @@ const Skills = () => {
     <React.Fragment>
       <section>
         <h2 className={"title is-2"}>
-          <FontAwesomeIcon icon={faBrain} color={"#FF33C7"} />
+          <FaBrain color={"#FF33C7"} />
           {" Skills"}
         </h2>
 
