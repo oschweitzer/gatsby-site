@@ -28,25 +28,25 @@ const Education = () => {
   const data = useStaticQuery(query).allContentfulEducation.nodes;
   return (
     <section>
-      <h2 className="title is-2">
-        <FaGraduationCap color={"black"} />
-        {" Education"}
+      <h2 className='title is-2'>
+        <FaGraduationCap color={'black'} />
+        {' Education'}
       </h2>
-      <div className="timeline is-centered">
+      <div className='timeline is-centered'>
         {data.map((education, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-marker is-image is-24x24" />
-            <div className="timeline-content">
-              <p className="heading">
+          <div key={index} className='timeline-item'>
+            <div className='timeline-marker is-image is-24x24' />
+            <div className='timeline-content'>
+              <p className='heading'>
                 <i>
-                  {moment(education.startDate).format("LL")} -{" "}
-                  {moment(education.endDate).format("LL")}
+                  {moment(education.startDate).format('LL')} -{' '}
+                  {moment(education.endDate).format('LL')}
                 </i>
               </p>
-              <span className={[styles.university, "title is-6"].join(" ")}>
+              <span className={[styles.university, 'title is-6'].join(' ')}>
                 {education.degree} - {education.university}
               </span>
-              <div className={[styles.subject, "content"].join(" ")}>
+              <div className={[styles.subject, 'content'].join(' ')}>
                 {ReactHtmlParser(education.description.description)}
               </div>
             </div>

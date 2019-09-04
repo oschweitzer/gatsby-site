@@ -14,15 +14,11 @@
     "ordered-imports": [
       true
     ],
+    "no-submodule-imports": false,
     "no-console": [
       false
     ],
-    "no-var-requires": true,
-    "quotemark": [
-      true,
-      "double",
-      "jsx-double"
-    ]
+    "no-var-requires": true
   },
   "rulesDirectory": []
 }
