@@ -1,6 +1,9 @@
 import {graphql, useStaticQuery} from 'gatsby';
 import React from 'react';
 import {FaBrain} from 'react-icons/fa';
+import SectionTitle from '../titles/section';
+import SkillTypeTitle from '../titles/skill-type';
+import SkillList from './skill-list';
 import styles from './skills.module.scss';
 
 const query = graphql`
@@ -49,43 +52,21 @@ const Skills = () => {
   return (
     <React.Fragment>
       <section>
-        <h2 className={"title is-2"}>
-          <FaBrain color={"#FF33C7"} />
-          {" Skills"}
-        </h2>
-
-        <div className={"columns"}>
-          <div className={"column"}>
-            <h4 className="title is-4">Technologies</h4>
-            <div className={["content", styles.skill].join(" ")}>
-              <ul>
-                {technologies.map((technology, index) => (
-                  <li key={index}>{technology.name}</li>
-                ))}
-              </ul>
-            </div>
+        <SectionTitle text={' Skills'} children={<FaBrain color={'#FF33C7'} />} />
+        <div className={'columns'}>
+          <div className={'column'}>
+            <SkillTypeTitle text={'Technologies'} />
+            <SkillList iterable={technologies}/>
           </div>
-          <div className={["is-divider-vertical", styles.divider].join(" ")} />
-          <div className={"column"}>
-            <h4 className="title is-4">Communication</h4>
-            <div className={["content", styles.skill].join(" ")}>
-              <ul>
-                {communication.map((communicationSkill, index) => (
-                  <li key={index}>{communicationSkill.name}</li>
-                ))}
-              </ul>
-            </div>
+          <div className={['is-divider-vertical', styles.divider].join(' ')} />
+          <div className={'column'}>
+            <SkillTypeTitle text={'Communication'} />
+            <SkillList iterable={communication}/>
           </div>
-          <div className={["is-divider-vertical", styles.divider].join(" ")} />
-          <div className={"column"}>
-            <h4 className="title is-4">Methodology</h4>
-            <div className={["content", styles.skill].join(" ")}>
-              <ul>
-                {methodology.map((methodologySkill, index) => (
-                  <li key={index}>{methodologySkill.name}</li>
-                ))}
-              </ul>
-            </div>
+          <div className={['is-divider-vertical', styles.divider].join(' ')} />
+          <div className={'column'}>
+            <SkillTypeTitle text={'Methodology'} />
+            <SkillList iterable={methodology} />
           </div>
         </div>
       </section>

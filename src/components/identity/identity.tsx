@@ -2,6 +2,7 @@ import {graphql, useStaticQuery} from 'gatsby';
 import React from 'react';
 import {FaEnvelope, FaGithub, FaLinkedin, FaQuoteLeft, FaQuoteRight, FaTwitter} from 'react-icons/fa';
 import profilePhoto from '../../../static/me.jpeg';
+import SocialNetwork from '../social-network/social-network';
 import styles from './identity.module.scss';
 
 const idQuery = graphql`
@@ -33,34 +34,21 @@ const Identity = () => {
               className={styles.profilePhoto}
             />
             <h1 className={styles.mainTitle}> {data.name} </h1>
-            <h3 className={'title is-3'}>{data.job}</h3>
+            <h3 className={['title', 'is-3', styles.subtitle].join(' ')}>{data.job}</h3>
             <blockquote className={[styles.description, 'content'].join(' ')}>
               <FaQuoteLeft />
               <span> {data.description.description} </span>
               <FaQuoteRight />
             </blockquote>
             <div className='is-block'>
-              <a
-                className={styles.socialNetworks}
-                href='https://www.linkedin.com/in/olivier-schweitzer-a494147b'
-                target='_blank'>
-                <FaLinkedin className={styles.linkedin} />
-              </a>
-              <a className={styles.socialNetworks}
-                 href='https://github.com/oschweitzer'
-                 target='_blank'>
-                <FaGithub color={'white'} />
-              </a>
-              <a className={styles.socialNetworks}
-                 href='mailto:olivier.sch68@gmail.com'
-                 target='_blank'>
-                <FaEnvelope color={'#B23121'} />
-              </a>
-              <a className={styles.socialNetworks}
-                 href='https://twitter.com/Oli_Schweitzer'
-                 target='_blank'>
-                <FaTwitter color={'#1DA1F2'} />
-              </a>
+              <SocialNetwork link={'https://www.linkedin.com/in/olivier-schweitzer-a494147b'}
+                             children={<FaLinkedin className={styles.linkedIn} />} />
+              <SocialNetwork link={'https://github.com/oschweitzer'}
+                             children={<FaGithub color={'var(--textNormal)'} />} />
+              <SocialNetwork link={'mailto:olivier.sch68@gmail.com'}
+                             children={<FaEnvelope color={'#B23121'} />} />
+              <SocialNetwork link={'https://twitter.com/Oli_Schweitzer'}
+                             children={<FaTwitter color={'#1DA1F2'} />} />
             </div>
           </section>
         </div>

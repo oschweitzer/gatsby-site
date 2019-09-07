@@ -17,22 +17,25 @@
   "dependencies": {
     "bulma": "^0.7.5",
     "bulma-divider": "^0.2.0",
+    "bulma-switch": "^2.0.0",
     "bulma-timeline": "^3.0.4",
     "gatsby": "^2.13.39",
     "gatsby-plugin-material-ui": "^2.1.4",
     "gatsby-plugin-sass": "^2.1.8",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.2",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-source-contentful": "^2.1.29",
-    "gatsby-transformer-typescript-css-modules": "^1.0.14",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-html-parser": "^2.0.2",
-    "react-icons": "^3.7.0"
+    "react-icons": "^3.7.0",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "@types/material-ui": "^0.21.6",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
