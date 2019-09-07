@@ -3,6 +3,7 @@ import moment from 'moment';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import {FaGraduationCap} from 'react-icons/fa';
+import SectionTitle from '../titles/section';
 import styles from './education.module.scss';
 
 const query = graphql`
@@ -28,10 +29,7 @@ const Education = () => {
   const data = useStaticQuery(query).allContentfulEducation.nodes;
   return (
     <section>
-      <h2 className='title is-2'>
-        <FaGraduationCap color={'black'} />
-        {' Education'}
-      </h2>
+      <SectionTitle text={' Education'} children={<FaGraduationCap color={'black'} />}/>
       <div className='timeline is-centered'>
         {data.map((education, index) => (
           <div key={index} className='timeline-item'>

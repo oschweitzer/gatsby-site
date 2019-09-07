@@ -6,19 +6,23 @@ import PersonalProject from "../components/projects/personal-projects/personal-p
 import WorkExperience from "../components/projects/work-experience/work-experience";
 import Skills from "../components/skills/skills";
 import "../styles/global.scss";
+import ThemeToggle from '../components/theme-toggle/theme-toggle';
 
 export default () => (
   <React.Fragment>
-    <Identity />
-    <hr />
-    <Skills />
-    <hr />
-    <WorkExperience />
-    <hr />
-    <PersonalProject />
-    <hr />
-    <Education />
-    <hr />
-    <Footer />
+    <div id={"mainContainer"}>
+      <ThemeToggle/>
+      <Identity />
+      <hr />
+      <Skills />
+      <hr />
+      <WorkExperience />
+      <hr />
+      <PersonalProject />
+      <hr />
+      <Education />
+      <hr />
+      <Footer />
+    </div>
   </React.Fragment>
 );

@@ -9,14 +9,26 @@ $divider-background-color: black;
 @import "~bulma/bulma.sass";
 @import "~bulma-timeline";
 @import "~bulma-divider";
+@import "~bulma-switch";
 
-html {
-  background-color: #202020;
+body.dark-mode {
+  -webkit-font-smoothing: antialiased;
+  --bg: #202020;
+  --textNormal: white;
+  background-color: var(--bg);
 }
 
-body {
+body.light-mode {
+  --bg: white;
+  --textNormal: #222;
+  background-color: var(--bg);
+}
+
+
+#mainContainer {
   margin-left: 15%;
   margin-right: 15%;
+  color: var(--textNormal);
 }
 
 hr {

@@ -4,6 +4,8 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import {FaBriefcase} from 'react-icons/fa';
 import {arrayTo2DArray2} from '../../../common/utils';
+import ProjectSection from '../../titles/project-section';
+import SectionTitle from '../../titles/section';
 import styles from './work-experience.module.scss';
 
 const query = graphql`
@@ -36,10 +38,7 @@ const WorkExperience = () => {
   const data = useStaticQuery(query).allContentfulWorkExperience.nodes;
   return (
     <section>
-      <h2 className="title is-2">
-        <FaBriefcase color={"#624a2e"} />
-        {" Work experience"}
-      </h2>
+      <SectionTitle children={<FaBriefcase color={"#624a2e"} />} text={" Work experience"} />
       <div className="timeline is-centered">
         {data.map((workExperience, index: number) => (
           <div key={index} className="timeline-item">
@@ -54,16 +53,16 @@ const WorkExperience = () => {
               <span className={["title is-6", styles.company].join(" ")}>
                 {workExperience.title} - {workExperience.company}
               </span>
-              <h6 className="title is-6">Context</h6>
+              <ProjectSection text={"Context"} />
               <div className={[styles.projectDescription, "content"].join(" ")}>
                 {ReactHtmlParser(workExperience.context.context)}
               </div>
               <br />
-              <h6 className="title is-6">Missions</h6>
+              <ProjectSection text={"Missions"} />
               <div className={[styles.projectMissions, "content"].join(" ")}>
                 {ReactHtmlParser(workExperience.mission.mission)}
               </div>
-              <h6 className="title is-6">Skills</h6>
+              <ProjectSection text={"Skills"} />
               <br />
               <div className={styles.row}>
                 {arrayTo2DArray2(
