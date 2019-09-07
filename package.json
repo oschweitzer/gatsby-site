@@ -35,6 +35,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "@types/material-ui": "^0.21.6",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",

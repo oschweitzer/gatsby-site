@@ -40,10 +40,10 @@ const PersonalProject = () => {
   return (
     <React.Fragment>
       <section className={styles.personalProjects}>
-        <SectionTitle text={" Personal projects"} children={<FaHome color={"#D6B4A7"} />} />
-        <div className="columns is-multiline">
+        <SectionTitle text={' Personal projects'} children={<FaHome color={'#D6B4A7'} />} />
+        <div className='columns is-multiline'>
           {data.github.viewer.repositories.nodes.map((repository, index: number) => (
-            <div key={index} className="column is-one-third">
+            <div key={index} className='column is-one-third'>
               <GithubProject repository={repository} />
             </div>
           ))}

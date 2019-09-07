@@ -52,19 +52,19 @@ const Skills = () => {
   return (
     <React.Fragment>
       <section>
-        <SectionTitle text={" Skills"} children={<FaBrain color={"#FF33C7"} />} />
-        <div className={"columns"}>
-          <div className={"column"}>
+        <SectionTitle text={' Skills'} children={<FaBrain color={'#FF33C7'} />} />
+        <div className={'columns'}>
+          <div className={'column'}>
             <SkillTypeTitle text={'Technologies'} />
             <SkillList iterable={technologies}/>
           </div>
-          <div className={["is-divider-vertical", styles.divider].join(" ")} />
-          <div className={"column"}>
+          <div className={['is-divider-vertical', styles.divider].join(' ')} />
+          <div className={'column'}>
             <SkillTypeTitle text={'Communication'} />
             <SkillList iterable={communication}/>
           </div>
-          <div className={["is-divider-vertical", styles.divider].join(" ")} />
-          <div className={"column"}>
+          <div className={['is-divider-vertical', styles.divider].join(' ')} />
+          <div className={'column'}>
             <SkillTypeTitle text={'Methodology'} />
             <SkillList iterable={methodology} />
           </div>
