@@ -6,7 +6,9 @@ const SocialNetwork = ({children, link}) => {
     <a
       className={styles.socialNetworks}
       href={link}
-      target='_blank'>
+      target='_blank'
+      rel='noopener'
+    aria-label='Links to my social networks'>
       {children}
     </a>
   )

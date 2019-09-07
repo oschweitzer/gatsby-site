@@ -6,7 +6,21 @@
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Olivier Schweitzer website`,
+        short_name: `Olivier Schweitzer`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: `static/favicon.png`
+      },
+    },
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-use-dark-mode",
       options: {

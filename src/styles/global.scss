@@ -17,12 +17,14 @@ body.dark-mode {
   --bg: #202020;
   --textNormal: white;
   background-color: var(--bg);
+  --educationText: #65BD68;
 }
 
 body.light-mode {
   --bg: white;
   --textNormal: #222;
   background-color: var(--bg);
+  --educationText: #2B642D;
 }
 
 

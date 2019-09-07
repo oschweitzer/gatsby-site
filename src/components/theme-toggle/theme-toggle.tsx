@@ -10,7 +10,7 @@ const ThemeToggle = () => {
   return (
     <div className={styles.themeToggle}>
       <div className='field' title={"Activate/deactivate Dark mode"}>
-        <input id='switchRoundedDefault' type='checkbox' name='switchRoundedDefault' className='switch is-rounded is-info'
+        <input aria-label='Dark mode switch' id='switchRoundedDefault' type='checkbox' name='switchRoundedDefault' className='switch is-rounded is-info'
                checked={darkMode.value} onChange={darkMode.toggle} />
         <label htmlFor='switchRoundedDefault'>{icon}</label>
       </div>
