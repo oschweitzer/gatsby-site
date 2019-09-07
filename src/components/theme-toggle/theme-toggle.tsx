@@ -1,21 +1,21 @@
 import React from 'react';
-import {FaLightbulb} from 'react-icons/all';
+import {FaMoon, FaSun} from 'react-icons/all';
 import useDarkMode from 'use-dark-mode';
 import styles from './theme-toggle.module.scss';
 
 const ThemeToggle = () => {
-  const darkMode = useDarkMode(true);
+  const darkMode = useDarkMode(false);
+  const icon = darkMode.value ? <FaMoon color={'#F5F3CE'}/> : <FaSun color={'#F28C38'}/>;
 
   return (
     <div className={styles.themeToggle}>
       <div className='field' title={"Activate/deactivate Dark mode"}>
-
         <input id='switchRoundedDefault' type='checkbox' name='switchRoundedDefault' className='switch is-rounded is-info'
                checked={darkMode.value} onChange={darkMode.toggle} />
-          <label htmlFor='switchRoundedDefault'><FaLightbulb /></label>
+        <label htmlFor='switchRoundedDefault'>{icon}</label>
       </div>
     </div>
-);
+  );
 };
 
 export default ThemeToggle;
