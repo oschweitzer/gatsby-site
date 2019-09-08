@@ -14,10 +14,12 @@ const ThemeToggle = () => {
   return (
     <div className={styles.themeToggle}>
       <div className='field' title={"Activate/deactivate Dark mode"}>
-        <input aria-label='Dark mode switch' id='switchRoundedDefault' type='checkbox'
-               name='switchRoundedDefault' className='switch is-rounded is-info'
-               checked={darkMode.value} onChange={darkMode.toggle} />
-        <label htmlFor='switchRoundedDefault'>{icon}</label>
+        <button aria-label='Dark mode button' className={['button', styles.darkModeButton].join(' ')}
+                onClick={darkMode.toggle}>
+          <span style={{color: 'var(--textNormal)'}}>
+          <FaSun /> / <FaMoon />
+          </span>
+        </button>
       </div>
     </div>
   );
