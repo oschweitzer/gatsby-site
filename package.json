@@ -1,7 +1,7 @@
 {
   "name": "gatsby-resume-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal portfolio website written with Gatsbyjs",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -31,7 +31,7 @@
     "gatsby-source-contentful": "^2.1.29",
     "gatsby-source-graphql": "2.1.25",
     "moment": "^2.24.0",
-    "node-sass": "^4.14.0",
+    "node-sass": "^4.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/oschweitzer/gatsby-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/oschweitzer/gatsby-site/issues"
   }
 }
