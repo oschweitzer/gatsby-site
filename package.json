@@ -19,7 +19,7 @@
     "bulma-divider": "^0.2.0",
     "bulma-switch": "^2.0.0",
     "bulma-timeline": "^3.0.4",
-    "gatsby": "^2.21.0",
+    "gatsby": "^2.24.37",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-material-ui": "^2.1.4",
     "gatsby-plugin-offline": "^3.0.3",
