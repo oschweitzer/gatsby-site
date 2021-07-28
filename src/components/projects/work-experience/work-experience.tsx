@@ -47,7 +47,7 @@ const WorkExperience = () => {
               <p className='heading'>
                 <i>
                   {moment(workExperience.startDate).format('LL')} -{' '}
-                  {moment(workExperience.endDate).format('LL')}
+                  {workExperience?.endDate ? moment(workExperience.endDate).format('LL') : 'Today'}
                 </i>
               </p>
               <span className={['title is-6', styles.company].join(' ')}>
