@@ -31,7 +31,7 @@
     "gatsby-source-contentful": "^2.1.29",
     "gatsby-source-graphql": "2.1.25",
     "moment": "^2.29.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
