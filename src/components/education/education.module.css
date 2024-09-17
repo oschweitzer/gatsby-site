@@ -1,0 +1,23 @@
+.subject {
+    text-align: left;
+}
+
+.university {
+    color: var(--textNormal);
+}
+
+.education-card {
+    border: solid 1px var(--borderColor);
+}
+
+.bullet-icon {
+    color: var(--processCyan);
+}
+
+.text-date {
+    color: var(--savoyBlue);
+}
+
+.timeline-dot {
+    background-color: var(--verdiGris);
+}

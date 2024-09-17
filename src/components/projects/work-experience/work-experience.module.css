@@ -1,0 +1,35 @@
+.project-description {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.project-missions {
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+.company {
+    color: #1976d2;
+}
+
+
+.skill {
+    padding: 0.3em;
+    font-size: 0.9em;
+}
+
+.experience-card {
+    border: solid 1px var(--borderColor);
+}
+
+.timeline-dot {
+    background-color: var(--verdiGris);
+}
+
+.text-date {
+    color: var(--savoyBlue);
+}
+
+.bullet-icon{
+    color: var(--processCyan);
+}

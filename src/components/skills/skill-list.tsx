@@ -1,16 +1,20 @@
 import React from 'react';
-import styles from './skills.module.scss';
+import * as skillsStyles from './skills.module.css';
+import { TbChevronRight } from 'react-icons/tb';
 
-const SkillList = ({iterable}) => {
+const SkillList = ({ iterable }) => {
   return (
-    <div className={['content', styles.skill].join(' ')}>
+    <div className={`${skillsStyles.skill}`}>
       <ul>
         {iterable.map((elem, index) => (
-          <li key={index}>{elem.name}</li>
+          <li key={index} className={'flex flex-row items-center'}>
+            <TbChevronRight />
+            {elem.name}
+          </li>
         ))}
       </ul>
     </div>
-  )
+  );
 };
 
 export default SkillList;
