@@ -1,9 +1,9 @@
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import {FaHome} from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import SectionTitle from '../../titles/section';
 import GithubProject from '../github-project/github-project';
-import * as styles from './personal-projects.module.scss';
+import * as personalProjectsStyles from './personal-projects.module.css';
 
 const query = graphql`
   {
@@ -34,16 +34,15 @@ const query = graphql`
   }
 `;
 
-
 const PersonalProject = () => {
   const data = useStaticQuery(query);
   return (
     <React.Fragment>
-      <section className={styles.personalProjects}>
+      <section className={`${personalProjectsStyles.personalProjects}`}>
         <SectionTitle text={' Personal projects'} children={<FaHome color={'#D6B4A7'} />} />
-        <div className='columns is-multiline'>
+        <div className="grid grid-cols-2 gap-4">
           {data.github.viewer.repositories.nodes.map((repository, index: number) => (
-            <div key={index} className='column is-one-third'>
+            <div key={index} className="">
               <GithubProject repository={repository} />
             </div>
           ))}
