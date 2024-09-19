@@ -1,0 +1,43 @@
+.main-title {
+    text-align: center;
+    color: var(--textNormal)
+
+}
+
+.description {
+    font-style: italic;
+    font-size: 50%;
+}
+
+.navigation-cards-component {
+    margin-top: 5%;
+}
+
+.my-header {
+    margin-bottom: 1%;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.profile-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    box-shadow: 0 0 55px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 55px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 55px rgba(0, 0, 0, .8);
+    width: 18%;
+}
+
+.subtitle {
+  color: var(--textNormal)
+}
+
+.linkedIn {
+  background-color: white;
+  color: #0077B5;
+}

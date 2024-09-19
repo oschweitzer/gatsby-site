@@ -1,9 +1,16 @@
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import {FaEnvelope, FaGithub, FaLinkedin, FaQuoteLeft, FaQuoteRight, FaTwitter} from 'react-icons/fa';
-import profilePhoto from '../../../static/me.jpeg';
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaQuoteLeft,
+  FaQuoteRight,
+  FaTwitter,
+} from 'react-icons/fa';
+import profilePicture from '../../../static/me.png';
 import SocialNetwork from '../social-network/social-network';
-import styles from './identity.module.scss';
+import * as identityStyles from './identity.module.css';
 
 const idQuery = graphql`
   {
@@ -25,30 +32,41 @@ const Identity = () => {
   const data = useStaticQuery(idQuery).allContentfulIdentity.edges[0].node;
   return (
     <React.Fragment>
-      <section className={[styles.myHeader, 'hero', 'is-fullheight'].join(' ')}>
-        <div className={'hero-body'}>
-          <section className={'container'}>
+      <section className={identityStyles.myHeader}>
+        <div className={'h-dvh bg-cover flex flex-col items-center justify-center'}>
+          <section className={'flex flex-col gap-2'}>
             <img
-              src={profilePhoto}
+              src={profilePicture}
               alt={'My profile photo'}
-              className={styles.profilePhoto}
+              className={identityStyles.profilePhoto}
             />
-            <h1 className={styles.mainTitle}> {data.name} </h1>
-            <h3 className={['title', 'is-3', styles.subtitle].join(' ')}>{data.job}</h3>
-            <blockquote className={[styles.description, 'content'].join(' ')}>
+            <h1
+              className={`${identityStyles.mainTitle} mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white`}>
+              {data.name}
+            </h1>
+            <h3 className={`${identityStyles.subtitle}`}>{data.job}</h3>
+            <blockquote
+              className={`${identityStyles.description} mt-8 flex flex-col justify-center items-center`}>
               <FaQuoteLeft />
-              <span> {data.description.description} </span>
-              <FaQuoteRight />
+              <span className={'mx-10'}> "{data.description.description}" </span>
             </blockquote>
-            <div className='is-block'>
-              <SocialNetwork link={'https://www.linkedin.com/in/olivier-schweitzer-a494147b'}
-                             children={<FaLinkedin className={styles.linkedIn} />} />
-              <SocialNetwork link={'https://github.com/oschweitzer'}
-                             children={<FaGithub color={'var(--textNormal)'} />} />
-              <SocialNetwork link={'mailto:olivier.sch68@gmail.com'}
-                             children={<FaEnvelope color={'#B23121'} />} />
-              <SocialNetwork link={'https://twitter.com/Oli_Schweitzer'}
-                             children={<FaTwitter color={'#1DA1F2'} />} />
+            <div className="mt-10 flex-row flex justify-center content-center gap-4">
+              <SocialNetwork
+                link={'https://www.linkedin.com/in/olivier-schweitzer-a494147b'}
+                children={<FaLinkedin className={`${identityStyles.linkedIn}`} />}
+              />
+              <SocialNetwork
+                link={'https://github.com/oschweitzer'}
+                children={<FaGithub color={'var(--textNormal)'} />}
+              />
+              <SocialNetwork
+                link={'mailto:olivier.sch68@gmail.com'}
+                children={<FaEnvelope color={'#B23121'} />}
+              />
+              <SocialNetwork
+                link={'https://twitter.com/Oli_Schweitzer'}
+                children={<FaTwitter color={'#1DA1F2'} />}
+              />
             </div>
           </section>
         </div>

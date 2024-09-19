@@ -9,3 +9,12 @@ export const arrayTo2DArray2 = (list: any[], howMany: number) => {
   }
   return result;
 };
+
+export const groupBy = (arr, callback) => {
+  return arr.reduce((acc = {}, ...args) => {
+    const key = callback(...args);
+    acc[key] ??= [];
+    acc[key].push(args[0]);
+    return acc;
+  }, {});
+};
